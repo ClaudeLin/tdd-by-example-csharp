@@ -11,7 +11,7 @@
 
         public void Times(int multiplier)
         {
-            Amount = 5 * multiplier;
+            Amount = Amount * multiplier;
         }
     }
 }
