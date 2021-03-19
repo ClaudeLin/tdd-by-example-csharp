@@ -6,6 +6,7 @@
 
         public Dollar(int amount)
         {
+            Amount = amount;
         }
 
         public void Times(int multiplier)
