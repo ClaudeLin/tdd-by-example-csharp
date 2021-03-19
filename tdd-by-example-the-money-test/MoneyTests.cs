@@ -11,9 +11,9 @@ namespace tdd_by_example_the_money_test
             var five = new Dollar(5);
             var product = five.Times(2);
 
-            Assert.AreEqual(10, five.Amount);
+            Assert.AreEqual(10, product.Amount);
             product = five.Times(3);
-            Assert.AreEqual(15, five.Amount);
+            Assert.AreEqual(15, product.Amount);
         }
     }
 }
