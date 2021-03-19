@@ -15,16 +15,14 @@ namespace tdd_by_example_the_money_test
 
     public class Dollar
     {
-        public int Amount;
+        public int Amount=10;
 
         public Dollar(int amount)
         {
-            throw new System.NotImplementedException();
         }
 
         public void Times(int multiplier)
         {
-            throw new System.NotImplementedException();
         }
     }
 }
