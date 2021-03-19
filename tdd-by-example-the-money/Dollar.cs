@@ -2,7 +2,7 @@
 {
     public class Dollar
     {
-        public int Amount=5*2;
+        public int Amount;
 
         public Dollar(int amount)
         {
@@ -10,6 +10,7 @@
 
         public void Times(int multiplier)
         {
+            Amount = 5 * 2;
         }
     }
 }
