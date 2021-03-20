@@ -1,9 +1,11 @@
 ﻿namespace tdd_by_example_the_money
 {
-    public class Money
+    public abstract class Money
     {
         protected int Amount;
 
+        public abstract Money Times(int multiplier);
+        
         public override bool Equals(object? obj)
         {
             var money = (Money) obj;
