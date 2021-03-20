@@ -2,8 +2,6 @@
 {
     public class Dollar : Money
     {
-        private readonly int _amount;
-
         public Dollar(int amount)
         {
             _amount = amount;
