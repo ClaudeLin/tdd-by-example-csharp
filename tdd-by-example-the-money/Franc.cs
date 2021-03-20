@@ -2,8 +2,6 @@
 {
     public class Franc : Money
     {
-        private string _currency;
-
         public Franc(int amount)
         {
             Amount = amount;
@@ -13,11 +11,6 @@
         public override Money Times(int multiplier)
         {
             return new Franc(Amount * multiplier);
-        }
-
-        public override string Currency()
-        {
-            return _currency;
         }
     }
 }

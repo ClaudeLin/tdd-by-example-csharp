@@ -3,6 +3,7 @@
     public abstract class Money
     {
         protected int Amount;
+        protected string _currency;
 
         public abstract Money Times(int multiplier);
 
@@ -22,6 +23,9 @@
             return new Franc(amount);
         }
 
-        public abstract string Currency();
+        public string Currency()
+        {
+            return _currency;
+        }
     }
 }
