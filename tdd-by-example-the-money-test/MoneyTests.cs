@@ -20,6 +20,7 @@ namespace tdd_by_example_the_money_test
         public void TestEquality()
         {
             Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
+            Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
         }
     }
 }
