@@ -12,7 +12,7 @@
             return Amount == money.Amount && GetType().Equals(money.GetType());
         }
 
-        public static Dollar Dollar(int amount)
+        public static Money Dollar(int amount)
         {
             return new Dollar(amount);
         }
