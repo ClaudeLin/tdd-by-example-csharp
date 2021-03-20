@@ -10,9 +10,9 @@ namespace tdd_by_example_the_money_test
         {
             var five = new Dollar(5);
             var product = five.Times(2);
-            Assert.AreEqual(new Dollar(10),product);
+            Assert.AreEqual(new Dollar(10), product);
             product = five.Times(3);
-            Assert.AreEqual(15, product.Amount);
+            Assert.AreEqual(new Dollar(15), product);
         }
 
         [Test]
