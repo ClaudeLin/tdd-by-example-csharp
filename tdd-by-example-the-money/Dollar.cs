@@ -2,7 +2,7 @@
 {
     public class Dollar
     {
-        public int Amount;
+        private int Amount;
 
         public Dollar(int amount)
         {
