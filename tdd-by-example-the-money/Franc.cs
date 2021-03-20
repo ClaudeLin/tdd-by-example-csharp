@@ -2,21 +2,19 @@
 {
     public class Franc : Money
     {
-        private readonly int _amount;
-
         public Franc(int amount)
         {
-            _amount = amount;
+            Amount = amount;
         }
 
         public Franc Times(int multiplier)
         {
-            return new Franc(_amount * multiplier);
+            return new Franc(Amount * multiplier);
         }
 
         public override bool Equals(object? obj)
         {
-            return _amount == ((Franc) obj)._amount;
+            return Amount == ((Franc) obj).Amount;
         }
     }
 }
