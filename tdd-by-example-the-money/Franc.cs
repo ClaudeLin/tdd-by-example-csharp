@@ -7,9 +7,9 @@
             Amount = amount;
         }
 
-        public Franc Times(int multiplier)
+        public Money Times(int multiplier)
         {
-            return new(Amount * multiplier);
+            return new Franc(Amount * multiplier);
         }
     }
 }
