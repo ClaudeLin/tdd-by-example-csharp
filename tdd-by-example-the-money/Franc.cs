@@ -11,10 +11,5 @@
         {
             return new Franc(Amount * multiplier);
         }
-
-        public override bool Equals(object? obj)
-        {
-            return Amount == ((Money) obj).Amount;
-        }
     }
 }
