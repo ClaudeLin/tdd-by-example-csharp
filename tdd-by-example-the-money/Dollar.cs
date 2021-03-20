@@ -1,6 +1,6 @@
 ﻿namespace tdd_by_example_the_money
 {
-    public class Dollar
+    public class Dollar : Money
     {
         private readonly int _amount;
 
@@ -16,7 +16,7 @@
 
         public override bool Equals(object? obj)
         {
-         return _amount == ((Dollar) obj)._amount;
+            return _amount == ((Dollar) obj)._amount;
         }
     }
 }
