@@ -8,7 +8,7 @@ namespace tdd_by_example_the_money_test
         [Test]
         public void TestMultiplication()
         {
-            var five = new Dollar(5);
+            var five = Money.Dollar(5);
             Assert.AreEqual(new Dollar(10), five.Times(2));
             Assert.AreEqual(new Dollar(15), five.Times(3));
         }
@@ -18,10 +18,10 @@ namespace tdd_by_example_the_money_test
         {
             Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
             Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
-            
+
             Assert.IsTrue(new Franc(5).Equals(new Franc(5)));
             Assert.IsFalse(new Franc(5).Equals(new Franc(6)));
-            
+
             Assert.IsFalse(new Franc(5).Equals(new Dollar(5)));
         }
 
