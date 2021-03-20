@@ -3,5 +3,10 @@
     public class Money
     {
         protected int Amount;
+
+        public override bool Equals(object? obj)
+        {
+            return Amount == ((Dollar) obj).Amount;
+        }
     }
 }
