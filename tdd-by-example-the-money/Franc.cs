@@ -9,7 +9,7 @@
 
         public Franc Times(int multiplier)
         {
-            return new Franc(Amount * multiplier);
+            return new(Amount * multiplier);
         }
     }
 }
