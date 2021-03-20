@@ -5,6 +5,13 @@
         protected int Amount;
         protected string _currency;
 
+
+        protected Money(int amount, string currency)
+        {
+            Amount = amount;
+            _currency = currency;
+        }
+
         public abstract Money Times(int multiplier);
 
         public override bool Equals(object? obj)
