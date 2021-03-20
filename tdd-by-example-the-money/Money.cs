@@ -20,7 +20,7 @@
 
         public static Money Franc(int amount)
         {
-            return new Franc(amount);
+            return new Franc(amount, "CHF");
         }
 
         public string Currency()
