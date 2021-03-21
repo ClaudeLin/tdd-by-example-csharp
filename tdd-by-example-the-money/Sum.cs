@@ -4,5 +4,10 @@
     {
         public Money Augend;
         public Money Addend;
+
+        public Sum(Money au, Money addend)
+        {
+            
+        }
     }
 }
