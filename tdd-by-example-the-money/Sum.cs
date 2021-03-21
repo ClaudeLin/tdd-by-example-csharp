@@ -5,7 +5,7 @@
         public Money Augend;
         public Money Addend;
 
-        public Sum(Money au, Money addend)
+        public Sum(Money augend, Money addend)
         {
             
         }
