@@ -1,6 +1,6 @@
 ﻿namespace tdd_by_example_the_money
 {
-    public class Money
+    public  class Money
     {
         protected int Amount;
         protected string _currency;
@@ -23,6 +23,10 @@
             return Amount == money.Amount && GetType().Equals(money.GetType());
         }
 
+        public override string ToString()
+        {
+            return Amount + " " + _currency;
+        }
 
         public static Money Dollar(int amount)
         {
