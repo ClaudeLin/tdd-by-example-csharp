@@ -6,7 +6,7 @@
         {
         }
 
-        public override Money Times(int multiplier)
+        public  Money Times(int multiplier)
         {
             return new Dollar(Amount * multiplier, _currency);
         }
