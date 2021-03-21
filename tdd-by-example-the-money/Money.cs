@@ -45,7 +45,7 @@
 
         public IExpression Plus(Money addend)
         {
-            return new Money(_amount + addend._amount,addend._currency);
+            return new Sum(this, addend);
         }
     }
 }
