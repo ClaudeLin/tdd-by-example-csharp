@@ -1,6 +1,6 @@
 ﻿namespace tdd_by_example_the_money
 {
-    public  class Money
+    public class Money
     {
         protected int Amount;
         protected string _currency;
@@ -12,9 +12,9 @@
             _currency = currency;
         }
 
-        public virtual Money Times(int multiplier)
+        public Money Times(int multiplier)
         {
-            return null;
+            return new Money(Amount * multiplier, _currency);
         }
 
         public override bool Equals(object? obj)
