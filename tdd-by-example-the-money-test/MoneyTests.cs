@@ -43,6 +43,7 @@ namespace tdd_by_example_the_money_test
         {
             Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
             Assert.AreEqual(Money.Dollar(10),sum);
+            Assert.AreEqual(Money.Dollar(10),reduced);
         }
     }
 }
