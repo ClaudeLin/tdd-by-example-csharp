@@ -43,11 +43,21 @@ namespace tdd_by_example_the_money_test
         {
             // Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
             // Assert.AreEqual(Money.Dollar(10),sum);
-            Money five=Money.Dollar(5);
+            Money five = Money.Dollar(5);
             IExpression sum = five.Plus(five);
-            Bank bank=new Bank();
-            Money reduced=bank.Reduce(sum,"USD");
-            Assert.AreEqual(Money.Dollar(10),reduced);
+            Bank bank = new Bank();
+            Money reduced = bank.Reduce(sum, "USD");
+            Assert.AreEqual(Money.Dollar(10), reduced);
+        }
+
+        [Test]
+        public void TestPlusReturnSum()
+        {
+            Money five = Money.Dollar(5);
+            IExpression result = five.Plus(five);
+            Sum sum = (Sum) result;
+            Assert.AreEqual(five,sum.Augend);
+            Assert.AreEqual(five,sum.Addend);
         }
     }
 }
