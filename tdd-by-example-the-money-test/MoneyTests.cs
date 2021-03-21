@@ -50,8 +50,4 @@ namespace tdd_by_example_the_money_test
             Assert.AreEqual(Money.Dollar(10),reduced);
         }
     }
-
-    public interface IExpression
-    {
-    }
 }
