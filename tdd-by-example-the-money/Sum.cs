@@ -13,7 +13,7 @@
 
         public Money Reduce(string to)
         {
-            int amount = this.Augend._amount + this.Addend._amount;
+            var amount = Augend._amount + Addend._amount;
             return new Money(amount, to);
         }
     }
