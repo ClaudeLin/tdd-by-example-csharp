@@ -2,11 +2,11 @@
 {
     public class Money:IExpression
     {
-        private readonly int _amount;
+        public readonly int _amount;
         private readonly string _currency;
 
 
-        private Money(int amount, string currency)
+        public Money(int amount, string currency)
         {
             _amount = amount;
             _currency = currency;
