@@ -12,7 +12,7 @@
             _currency = currency;
         }
 
-        public Money Times(int multiplier)
+        public virtual Money Times(int multiplier)
         {
             return null;
         }
