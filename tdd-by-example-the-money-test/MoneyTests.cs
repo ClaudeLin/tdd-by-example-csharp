@@ -19,8 +19,6 @@ namespace tdd_by_example_the_money_test
             Assert.IsTrue(Money.Dollar(5).Equals(Money.Dollar(5)));
             Assert.IsFalse(Money.Dollar(5).Equals(Money.Dollar(6)));
 
-            Assert.IsTrue(Money.Franc(5).Equals(Money.Franc(5)));
-            Assert.IsFalse(Money.Franc(5).Equals(Money.Franc(6)));
 
             Assert.IsFalse(Money.Franc(5).Equals(Money.Dollar(5)));
         }
@@ -36,8 +34,8 @@ namespace tdd_by_example_the_money_test
         [Test]
         public void TestCurrency()
         {
-            Assert.AreEqual("USD",Money.Dollar(1).Currency());
-            Assert.AreEqual("CHF",Money.Franc(1).Currency());
+            Assert.AreEqual("USD", Money.Dollar(1).Currency());
+            Assert.AreEqual("CHF", Money.Franc(1).Currency());
         }
 
         [Test]
