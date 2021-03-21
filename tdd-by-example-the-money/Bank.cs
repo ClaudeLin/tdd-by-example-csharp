@@ -4,9 +4,7 @@
     {
         public Money Reduce(IExpression source, string to)
         {
-            if (source is Money) return (Money) source.Reduce(to);
-            Sum sum = (Sum) source;
-            return sum.Reduce(to);
+            return source.Reduce(to);
         }
     }
 }
