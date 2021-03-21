@@ -7,7 +7,8 @@
 
         public Sum(Money augend, Money addend)
         {
-            
+            Augend = augend;
+            Addend = addend;
         }
     }
 }
