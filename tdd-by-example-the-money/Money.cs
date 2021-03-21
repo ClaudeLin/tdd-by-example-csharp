@@ -20,7 +20,7 @@
         public override bool Equals(object? obj)
         {
             var money = (Money) obj;
-            return Amount == money.Amount && GetType().Equals(money.GetType());
+            return Amount == money.Amount && _currency.Equals(money._currency);
         }
 
         public override string ToString()
