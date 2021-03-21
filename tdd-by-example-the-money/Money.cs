@@ -28,6 +28,11 @@
             return _amount + " " + _currency;
         }
 
+        public Money Reduce(string to)
+        {
+            return this;
+        }
+
         public static Money Dollar(int amount)
         {
             return new(amount, "USD");
