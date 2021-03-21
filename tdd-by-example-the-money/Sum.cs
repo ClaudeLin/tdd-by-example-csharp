@@ -2,8 +2,8 @@
 {
     public class Sum : IExpression
     {
-        public Money Augend;
-        public Money Addend;
+        public readonly Money Augend;
+        public readonly Money Addend;
 
         public Sum(Money augend, Money addend)
         {
@@ -13,7 +13,7 @@
 
         public Money Reduce(string to)
         {
-            var amount = Augend._amount + Addend._amount;
+            var amount = Augend.Amount + Addend.Amount;
             return new Money(amount, to);
         }
     }

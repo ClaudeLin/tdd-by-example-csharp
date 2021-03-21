@@ -8,7 +8,7 @@ namespace tdd_by_example_the_money_test
         [Test]
         public void TestMultiplication()
         {
-            Money five = Money.Dollar(5);
+            var five = Money.Dollar(5);
             Assert.AreEqual(Money.Dollar(10), five.Times(2));
             Assert.AreEqual(Money.Dollar(15), five.Times(3));
         }
@@ -26,7 +26,7 @@ namespace tdd_by_example_the_money_test
         [Test]
         public void TestFrancMultiplication()
         {
-            Money five = Money.Franc(5);
+            var five = Money.Franc(5);
             Assert.AreEqual(Money.Franc(10), five.Times(2));
             Assert.AreEqual(Money.Franc(15), five.Times(3));
         }
@@ -43,38 +43,38 @@ namespace tdd_by_example_the_money_test
         {
             // Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
             // Assert.AreEqual(Money.Dollar(10),sum);
-            Money five = Money.Dollar(5);
-            IExpression sum = five.Plus(five);
-            Bank bank = new Bank();
-            Money reduced = bank.Reduce(sum, "USD");
+            var five = Money.Dollar(5);
+            var sum = five.Plus(five);
+            var bank = new Bank();
+            var reduced = bank.Reduce(sum, "USD");
             Assert.AreEqual(Money.Dollar(10), reduced);
         }
 
         [Test]
         public void TestPlusReturnSum()
         {
-            Money five = Money.Dollar(5);
-            IExpression result = five.Plus(five);
-            Sum sum = (Sum) result;
-            Assert.AreEqual(five,sum.Augend);
-            Assert.AreEqual(five,sum.Addend);
+            var five = Money.Dollar(5);
+            var result = five.Plus(five);
+            var sum = (Sum) result;
+            Assert.AreEqual(five, sum.Augend);
+            Assert.AreEqual(five, sum.Addend);
         }
 
         [Test]
         public void TestReduceSum()
         {
-            IExpression sum = new Sum(Money.Dollar(3),Money.Dollar(4));
-            Bank bank = new Bank();
-            Money result = bank.Reduce(sum,"USD");
-            Assert.AreEqual(Money.Dollar(7),result);
+            var sum = new Sum(Money.Dollar(3), Money.Dollar(4));
+            var bank = new Bank();
+            var result = bank.Reduce(sum, "USD");
+            Assert.AreEqual(Money.Dollar(7), result);
         }
 
         [Test]
         public void TestReduceMoney()
         {
-            Bank bank = new Bank();
-            Money result = bank.Reduce(Money.Dollar(1), "USD");
-            Assert.AreEqual(Money.Dollar(1),result);
+            var bank = new Bank();
+            var result = bank.Reduce(Money.Dollar(1), "USD");
+            Assert.AreEqual(Money.Dollar(1), result);
         }
     }
 }

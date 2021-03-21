@@ -1,31 +1,31 @@
 ﻿namespace tdd_by_example_the_money
 {
-    public class Money:IExpression
+    public class Money : IExpression
     {
-        public readonly int _amount;
+        public readonly int Amount;
         private readonly string _currency;
 
 
         public Money(int amount, string currency)
         {
-            _amount = amount;
+            Amount = amount;
             _currency = currency;
         }
 
         public Money Times(int multiplier)
         {
-            return new Money(_amount * multiplier, _currency);
+            return new Money(Amount * multiplier, _currency);
         }
 
         public override bool Equals(object? obj)
         {
             var money = (Money) obj;
-            return _amount == money._amount && _currency.Equals(money._currency);
+            return Amount == money.Amount && _currency.Equals(money._currency);
         }
 
         public override string ToString()
         {
-            return _amount + " " + _currency;
+            return Amount + " " + _currency;
         }
 
         public Money Reduce(string to)
