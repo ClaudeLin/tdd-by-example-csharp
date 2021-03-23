@@ -28,7 +28,7 @@
             return Amount + " " + _currency;
         }
 
-        public Money Reduce(string to)
+        public Money Reduce(Bank bank, string to)
         {
             var rate=_currency.Equals("CHF") && to.Equals("USD") ? 2 : 1;
             return new Money(Amount / rate, to);
