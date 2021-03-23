@@ -14,7 +14,7 @@
 
         public Money Times(int multiplier)
         {
-            return new Money(Amount * multiplier, _currency);
+            return new(Amount * multiplier, _currency);
         }
 
         public override bool Equals(object? obj)
@@ -30,7 +30,7 @@
 
         public Money Reduce(Bank bank, string to)
         {
-            var rate=_currency.Equals("CHF") && to.Equals("USD") ? 2 : 1;
+            var rate = bank.Rate(_currency,to);
             return new Money(Amount / rate, to);
         }
 
