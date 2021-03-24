@@ -11,14 +11,14 @@ namespace tdd_by_example_the_money
             return source.Reduce(this, to);
         }
 
-        public void AddRate(string source, string to, int rate)
+        public void AddRate(string from, string to, int rate)
         {
-            rates.Add(new Pair(source, to), rate);
+            rates.Add(new Pair(from, to), rate);
         }
 
-        public int Rate(string currency, string to)
+        public int Rate(string from, string to)
         {
-            return currency.Equals("CHF") && to.Equals("USD") ? 2 : 1;
+            return (int) this.rates[new Pair(from, to)];
         }
     }
 }
