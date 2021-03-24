@@ -2,8 +2,8 @@
 {
     public class Sum : IExpression
     {
-        public readonly Money Augend;
-        public readonly Money Addend;
+        public readonly IExpression Augend;
+        public readonly IExpression Addend;
 
         public Sum(Money augend, Money addend)
         {
