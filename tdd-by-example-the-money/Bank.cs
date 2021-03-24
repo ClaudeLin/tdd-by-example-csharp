@@ -13,6 +13,7 @@ namespace tdd_by_example_the_money
 
         public void AddRate(string source, string to, int rate)
         {
+            rates.Add(new Pair(source, to), rate);
         }
 
         public int Rate(string currency, string to)
