@@ -102,5 +102,6 @@ namespace tdd_by_example_the_money_test
             var result = bank.Reduce(fiveBucks.Plus(tenFrances), "USD");
             Assert.AreEqual(Money.Dollar(10),result);
         }
+        
     }
 }
