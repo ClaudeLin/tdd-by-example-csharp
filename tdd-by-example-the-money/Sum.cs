@@ -5,7 +5,7 @@
         public readonly IExpression Augend;
         public readonly IExpression Addend;
 
-        public Sum(Money augend, Money addend)
+        public Sum(IExpression augend, IExpression addend)
         {
             Augend = augend;
             Addend = addend;
