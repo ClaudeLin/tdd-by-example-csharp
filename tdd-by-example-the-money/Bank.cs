@@ -18,6 +18,7 @@ namespace tdd_by_example_the_money
 
         public int Rate(string from, string to)
         {
+            if(from.Equals(to)) return 1;
             return (int) this.rates[new Pair(from, to)];
         }
     }
