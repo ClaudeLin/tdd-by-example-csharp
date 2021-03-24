@@ -12,9 +12,9 @@
             _currency = currency;
         }
 
-        public Money Times(int multiplier)
+        public IExpression Times(int multiplier)
         {
-            return new(Amount * multiplier, _currency);
+            return new Money(Amount * multiplier, _currency);
         }
 
         public override bool Equals(object? obj)
