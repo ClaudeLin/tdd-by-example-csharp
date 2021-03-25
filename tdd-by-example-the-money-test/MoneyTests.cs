@@ -114,5 +114,17 @@ namespace tdd_by_example_the_money_test
             var result = bank.Reduce(sum, "USD");
             Assert.AreEqual(Money.Dollar(15),result);
         }
+
+        [Test]
+        public void TestSumTimes()
+        {
+            var fiveBucks = Money.Dollar(5);
+            var tenFrancs = Money.Franc(10);
+            var bank = new Bank();
+            bank.AddRate("CHF","USD",2);
+            IExpression sum=new Sum(fiveBucks, tenFrancs).Times(2);
+            var result = bank.Reduce(sum, "USD");
+            Assert.AreEqual(Money.Dollar(20),result);
+        }
     }
 }
