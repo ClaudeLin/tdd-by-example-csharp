@@ -89,7 +89,7 @@ namespace tdd_by_example_the_money_test
         [Test]
         public void TestIdentityRate()
         {
-            Assert.AreEqual(1,new Bank().Rate("USD","USD"));
+            Assert.AreEqual(1, new Bank().Rate("USD", "USD"));
         }
 
         [Test]
@@ -100,7 +100,7 @@ namespace tdd_by_example_the_money_test
             var bank = new Bank();
             bank.AddRate("CHF", "USD", 2);
             var result = bank.Reduce(fiveBucks.Plus(tenFrances), "USD");
-            Assert.AreEqual(Money.Dollar(10),result);
+            Assert.AreEqual(Money.Dollar(10), result);
         }
 
         [Test]
@@ -112,7 +112,7 @@ namespace tdd_by_example_the_money_test
             bank.AddRate("CHF", "USD", 2);
             var sum = new Sum(fiveBucks, tenFrancs).Plus(fiveBucks);
             var result = bank.Reduce(sum, "USD");
-            Assert.AreEqual(Money.Dollar(15),result);
+            Assert.AreEqual(Money.Dollar(15), result);
         }
 
         [Test]
@@ -121,17 +121,10 @@ namespace tdd_by_example_the_money_test
             var fiveBucks = Money.Dollar(5);
             var tenFrancs = Money.Franc(10);
             var bank = new Bank();
-            bank.AddRate("CHF","USD",2);
-            IExpression sum=new Sum(fiveBucks, tenFrancs).Times(2);
+            bank.AddRate("CHF", "USD", 2);
+            var sum = new Sum(fiveBucks, tenFrancs).Times(2);
             var result = bank.Reduce(sum, "USD");
-            Assert.AreEqual(Money.Dollar(20),result);
-        }
-
-        [Test]
-        public void TestPlusSamCurrencyReturnsMoney()
-        {
-            var sum = Money.Dollar(1).Plus(Money.Dollar(1));
-            Assert.IsTrue(sum is Money);
+            Assert.AreEqual(Money.Dollar(20), result);
         }
     }
 }
