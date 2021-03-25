@@ -24,7 +24,7 @@
 
         public IExpression Times(int multiplier)
         {
-            return null;
+            return new Sum(Augend.Times(multiplier), Addend.Times(multiplier));
         }
     }
 }
