@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd-by-example-the-money-te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd-by-example-the-xUnit", "tdd-by-example-the-xUnit\tdd-by-example-the-xUnit.csproj", "{2D258718-49FE-4EAE-A779-BFE00D56DD58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd-by-example-the-xUnit-test", "tdd-by-example-the-xUnit-test\tdd-by-example-the-xUnit-test.csproj", "{091810B6-8198-43AE-86DF-31B9E438276E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{2D258718-49FE-4EAE-A779-BFE00D56DD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D258718-49FE-4EAE-A779-BFE00D56DD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D258718-49FE-4EAE-A779-BFE00D56DD58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{091810B6-8198-43AE-86DF-31B9E438276E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{091810B6-8198-43AE-86DF-31B9E438276E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{091810B6-8198-43AE-86DF-31B9E438276E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{091810B6-8198-43AE-86DF-31B9E438276E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
